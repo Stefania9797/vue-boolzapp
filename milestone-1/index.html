@@ -46,9 +46,10 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search" @keydown.enter="filteredContacts()">
             </div>
             <!-- /Search -->
-            <div class="contatti d-flex align-items-center">
-                <img src="./assets/img/avatar_1.jpg" alt="">
-                <span>Michele</span>
+            <div v-for="contact in contacts"
+            class="contatti d-flex align-items-center">
+                <img :src="'./assets/img/'+contact.avatar" alt="">
+                <span>{{contact.name}}</span>
             </div>
         </div>
         <!-- /Left Side -->

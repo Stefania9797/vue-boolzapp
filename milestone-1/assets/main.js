@@ -5,7 +5,7 @@ var app = new Vue(
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: 'img/avatar-1.svg',
+                    avatar: 'avatar_1.jpg',
                     visible: true,
                     messages: [
                         {
@@ -27,7 +27,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Fabio',
-                    avatar: 'img/avatar-2.svg',
+                    avatar: 'avatar_2.jpg',
                     visible: true,
                     messages: [
                         {
@@ -49,7 +49,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Samuele',
-                    avatar: 'img/avatar-3.svg',
+                    avatar: 'avatar_3.jpg',
                     visible: true,
                     messages: [
                         {
@@ -71,7 +71,7 @@ var app = new Vue(
                 },
                 {
                     name: 'Luisa',
-                    avatar: 'img/avatar-4.svg',
+                    avatar: 'avatar_4.jpg',
                     visible: true,
                     messages: [
                         {
@@ -87,9 +87,5 @@ var app = new Vue(
                     ],
                 },
             ],
-            currentContact: 0,  //index contatto
-            currentMessage: null,   //index messaggio
-            messageText: "",    //campo vuoto messaggio
-            search: "",     //campo vuoto ricerca contatti
         },
     })
