@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #019789 0%,
+    #019789 15%,
+    #d9dbd5 15%,
+    #d9dbd5 100%
+  );
+  background-repeat: no-repeat;
+}
+#root {
+  width: 80%;
+  margin: 10px auto;
+}
+span,
+i {
+  font-size: larger;
+}
+.align-items-center {
+  align-items: center;
+}
+.d-flex {
+  display: flex;
+}
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 10px;
+}
+/* Left side */
+.left-side {
+  min-width: 35%;
+}
+.user-icons-r i {
+  margin: 0 5px;
+  color: grey;
+}
+.user-l span {
+  margin-right: 30px;
+}
+.user-details {
+  border-right: 1px solid grey;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px 10px 10px;
+  background-color: #eaeaea;
+}
+/* Notifiche */
+.notifiche {
+  background-color: lightskyblue;
+  padding: 15px;
+}
+.notifiche i {
+  color: lightskyblue;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 2.5;
+  height: 50px;
+  width: 50px;
+}
+.notif-text {
+  margin-left: 20px;
+}
+/* Search */
+.chat-search {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #fafafa;
+}
+.search-icon {
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-right: 0;
+  background-color: #fff;
+  color: lightgrey;
+}
+
+.chat-search input {
+  width: calc(100% - 80px);
+  height: 35px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+/* Contatti */
+.contatti {
+  background-color: white;
+}
+.current-contact-info {
+  height: 70px;
+  background-color: #eaeaea;
+  justify-content: space-between;
+}
+/* Right side */
+.right-side {
+  width: 65%;
+}
+.right-side p {
+  color: grey;
+}
+.right-side i {
+  color: grey;
+  padding: 10px;
+}
+/* Message area */
+.message-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  padding: 50px 70px;
+  background-image: url(./img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow-y: scroll;
+}
+/* Ctrls */
+.message-control {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 10px 30px;
+  background-color: #eaeaea;
+  border-left: 1px solid lightgrey;
+}
+.message-control input {
+  width: 100%;
+  height: 100%;
+  margin: 0 20px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  background-color: #fff;
+}
