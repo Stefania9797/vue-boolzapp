@@ -128,11 +128,11 @@ img {
   overflow-wrap: break-word;
 }
 
-.msg-sent {
+.sent {
   align-self: flex-end;
   background-color: #d5f9ba;
 }
-.msg-received {
+.received {
   background-color: white;
 }
 .message-area {
