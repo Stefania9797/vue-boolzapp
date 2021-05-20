@@ -47,6 +47,7 @@
             </div>
             <!-- /Search -->
             <div v-for="(contact,index) in contacts"
+            @click="ChangeActiveContact(index)"
             class="contatti d-flex align-items-center">
                 <img :src="'./assets/img/'+contact.avatar" alt="">
                 <span>{{contact.name}}</span>
@@ -58,11 +59,11 @@
             <div class="current-contact-info d-flex align-items-center">
                 <div class="contact-info d-flex align-items-center">
                     <div class="img">
-                        <img src="./assets/img/avatar_1.jpg" alt="">
+                        <img :src="'./assets/img/'+contacts[activeContact].avatar" alt="">
                     </div>
-                    <div v-for=""
+                    <div
                     class="text">
-                        <span>Michele</span>
+                        <span>{{contacts[activeContact].name}}</span>
                         <p>Ultimo accesso oggi alle</p>
                     </div>
                 </div>
@@ -73,8 +74,8 @@
                 </div>
             </div>
             <div class="message-area">
-                <div class="msg" v-for="">
-                    <p></p>
+                <div class="msg" :class="message.status" v-for="message in contacts[activeContact].messages">
+                    <p>{{ message.text }}</p>
                 </div>
             </div>
             <div class="message-control d-flex">

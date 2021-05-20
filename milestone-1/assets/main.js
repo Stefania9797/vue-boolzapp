@@ -1,7 +1,9 @@
 var app = new Vue(
     {
         el: '#root',
-        data: {contacts: [
+        data:
+        {active_contact:0,
+        contacts: [
                 {name: 'Michele',avatar: 'avatar_1.jpg',visible: true,
                 messages: [
                         {date: '10/01/2020 15:30:55',text: 'Hai portato a spasso il cane?',status: 'sent'},
@@ -27,6 +29,10 @@ var app = new Vue(
                     ],
                 },
             ],
-            active_contact:0
         },
+        methods:{
+            ChangeActiveContact(){
+                console.log(this.active_contact);
+            }
+        }
     })
