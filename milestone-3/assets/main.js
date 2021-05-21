@@ -118,6 +118,6 @@ var root = new Vue(
                     }
                     ActiveChat.push(pcResponseObj)
                 },1000)
-            }
+            },
         },
     })

@@ -158,8 +158,6 @@ img {
   height: 375px;
   padding: 50px 70px;
   background-image: url(./img/background.jpg);
-  background-position: center;
-  background-size: cover;
   overflow-y: scroll;
 }
 /* Ctrls */
