@@ -55,7 +55,7 @@ var root = new Vue(
                     name: 'Samuele',
                     avatar: 'avatar_3.jpg',
                     visible: true,
-                    accesso:"16:15",
+                    accesso:"16:17",
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
@@ -101,7 +101,7 @@ var root = new Vue(
             addNewMsg(){
                 //creo nuovo oggetto messaggio
                 let newMsgObj = {
-                    date: '21/05/2021 09:57',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     text: this.newMsg,
                     status: 'sent'
                 };
@@ -112,7 +112,7 @@ var root = new Vue(
                 //Risposta automatica
                 setTimeout(function(){
                     let pcResponseObj={
-                    date: '21/05/2021 09:57',
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                         text: "ok",
                         status: 'received'
                     }

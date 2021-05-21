@@ -108,6 +108,18 @@ img {
   background-color: #eaeaea;
   justify-content: space-between;
 }
+.date {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 10px;
+  color: grey;
+  align-self: flex-start;
+  min-width: 100px;
+}
+.contact-info p {
+  color: grey;
+  font-size: 12px;
+}
 /* Right side */
 .right-side {
   width: 65%;
