@@ -1,13 +1,15 @@
-var app = new Vue(
+var root = new Vue(
     {
         el: '#root',
         data: {
             activeContact:0,
+            newMsg:"",
             contacts: [
                 {
                     name: 'Michele',
                     avatar: 'avatar_1.jpg',
                     visible: true,
+                    accesso:"15:50",
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -30,6 +32,7 @@ var app = new Vue(
                     name: 'Fabio',
                     avatar: 'avatar_2.jpg',
                     visible: true,
+                    accesso:"16:35",
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
@@ -52,6 +55,7 @@ var app = new Vue(
                     name: 'Samuele',
                     avatar: 'avatar_3.jpg',
                     visible: true,
+                    accesso:"16:15",
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
@@ -74,6 +78,7 @@ var app = new Vue(
                     name: 'Luisa',
                     avatar: 'avatar_4.jpg',
                     visible: true,
+                    accesso:"15:50",
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -92,6 +97,27 @@ var app = new Vue(
         methods:{
             ChangeActiveContact(index){
                 this.activeContact=index
+            },
+            addNewMsg(){
+                //creo nuovo oggetto messaggio
+                let newMsgObj = {
+                    date: '21/05/2021 09:57',
+                    text: this.newMsg,
+                    status: 'sent'
+                };
+                //lo inserico tra i messaggi
+                let ActiveChat = this.contacts[this.activeContact].messages;
+                ActiveChat.push(newMsgObj)
+                this.newMsg = '';
+                //Risposta automatica
+                setTimeout(function(){
+                    let pcResponseObj={
+                    date: '21/05/2021 09:57',
+                        text: "ok",
+                        status: 'received'
+                    }
+                    ActiveChat.push(pcResponseObj)
+                },1000)
             }
-        }
+        },
     })
