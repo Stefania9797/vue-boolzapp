@@ -49,6 +49,7 @@
             <!-- /Search -->
             <div v-for="(contact,index) in contacts"
             @click="ChangeActiveContact(index)"
+            :class="activeContact==index ? 'active' : 'inactive'"
             class="contatti d-flex align-items-center">
             <img :src="'./assets/img/'+contact.avatar" alt="">
                 <div class="contact-info">

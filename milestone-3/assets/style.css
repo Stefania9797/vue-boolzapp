@@ -109,10 +109,16 @@ img {
 .contatti {
   background-color: white;
 }
+.inactive:hover {
+  background-color: #d5f9ba;
+}
 .current-contact-info {
   height: 10vh;
   background-color: #eaeaea;
   justify-content: space-between;
+}
+.active {
+  background-color: lightgrey;
 }
 .date {
   margin-left: auto;
