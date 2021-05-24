@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzap</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+</head>
+<body>
+    <div id="root" class="d-flex">
+        <!-- Left Side -->
+        <div class="left-side">
+            <!-- User details -->
+            <div class="user-details d-flex">
+                <div class="user-l d-flex align-items-center">
+                    <img src="./assets/img/avatar_io.jpg" alt="">
+                    <span>Stefania</span>
+                </div>
+                <div class="user-icons-r d-flex align-items-center">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <!-- /User details -->
+            <!-- Notifiche -->
+            <div class="notifiche d-flex">
+                <div class="bell">
+                    <i class="fas fa-bell-slash"></i>
+                </div>
+                <div class="notif-text">
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
+            </div>
+            <!-- /Notifiche -->
+            <!-- Search -->
+            <div class="chat-search">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" v-model="searchTerm" @keyup="search"placeholder="Cerca o inizia una nuova chat">
+            </div>
+            <!-- /Search -->
+            <div v-for="(contact,index) in contacts"
+            @click="ChangeActiveContact(index)"
+            v-if="contact.visible"
+            class="contatti d-flex align-items-center">
+            <img :src="'./assets/img/'+contact.avatar" alt="">
+                <div class="contact-info">
+                    <span>{{contact.name}}</span>
+                    <p>{{contact.messages.slice(-1).pop().text}}</p>
+                </div>
+                <div class="date">
+                    <p>{{contact.messages.slice(-1).pop().date}}</p>
+                </div>
+            </div>
+        </div>
+        <!-- /Left Side -->
+        <!-- Right side -->
+        <div class="right-side">
+            <div class="current-contact-info d-flex align-items-center">
+                <div class="contact-info d-flex align-items-center">
+                    <div class="img">
+                        <img :src="'./assets/img/'+contacts[activeContact].avatar" alt="">
+                    </div>
+                    <div
+                    class="text">
+                        <span>{{contacts[activeContact].name}}</span>
+                        <p>Ultimo accesso oggi alle {{contacts[activeContact].accesso}}</p>
+                    </div>
+                </div>
+                <div class="contact-icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="message-area">
+                <div class="msg" :class="message.status" v-for="message in contacts[activeContact].messages">
+                    <p>{{ message.text }}</p>
+                    <small>{{message.date}}</small>
+                </div>
+            </div>
+            <div class="message-control d-flex">
+                <i class="far fa-smile"></i>
+                <input type="text" v-model="newMsg" @keyup.enter="addNewMsg" placeholder="Scrivi un messaggio">
+                <i class="fas fa-microphone"></i>
+            </div>
+        </div>
+        <!-- /Right side -->
+    </div>
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- JS -->
+    <script src="./assets/main.js"></script>
+</body>
+</html>
