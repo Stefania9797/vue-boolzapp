@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #009688 0px,
+    #009688 12vh,
+    #dddbd1 12vh,
+    #d2dbdc 100%
+  );
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+#root {
+  justify-content: center;
+  width: 80%;
+  margin: 20px auto;
+}
+span,
+i {
+  font-size: larger;
+}
+.align-items-center {
+  align-items: center;
+}
+.d-flex {
+  display: flex;
+}
+img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 12px;
+}
+.left-side,
+.right-side {
+  height: 90vh;
+}
+/* Left side */
+.left-side {
+  width: 400px;
+  overflow: auto;
+  background: white;
+}
+.user-icons-r i {
+  margin: 0 5px;
+  color: grey;
+}
+.user-l span {
+  margin-right: 30px;
+}
+.user-details {
+  border-right: 1px solid grey;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding: 10px 20px 10px 10px;
+  background-color: #eaeaea;
+}
+/* Notifiche */
+.notifiche {
+  background-color: lightskyblue;
+  padding: 15px;
+}
+.notifiche i {
+  color: lightskyblue;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 2.5;
+  height: 50px;
+  width: 50px;
+}
+.notif-text {
+  margin-left: 20px;
+}
+/* Search */
+.chat-search {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #fafafa;
+}
+.search-icon {
+  width: 80px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-right: 0;
+  background-color: #fff;
+  color: lightgrey;
+}
+
+.chat-search input {
+  width: calc(100% - 80px);
+  /* height: 35px; */
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+/* Contatti */
+.contatti {
+  background-color: white;
+}
+.inactive:hover {
+  background-color: #d5f9ba;
+}
+.current-contact-info {
+  height: 10vh;
+  background-color: #eaeaea;
+  justify-content: space-between;
+}
+.active {
+  background-color: lightgrey;
+}
+.date {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 10px;
+  color: grey;
+  align-self: flex-start;
+  min-width: 100px;
+}
+.contact-info p {
+  color: grey;
+  font-size: 12px;
+}
+/* Right side */
+.right-side {
+  width: 65%;
+}
+.right-side p {
+  color: grey;
+}
+.right-side i {
+  color: grey;
+  padding: 10px;
+}
+/* Message area */
+.message-area div {
+  position: relative;
+  width: 350px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow-wrap: break-word;
+}
+small {
+  font-size: 10px;
+}
+.sent {
+  align-self: flex-end;
+  background-color: #d5f9ba;
+}
+.received {
+  background-color: white;
+}
+.msg p {
+  color: black;
+}
+.message-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70vh;
+  padding: 50px 70px;
+  background-image: url(./img/background.jpg);
+  overflow-y: scroll;
+}
+/* Ctrls */
+.message-control {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding: 10px 30px;
+  background-color: #eaeaea;
+  border-left: 1px solid lightgrey;
+}
+.message-control input {
+  width: 100%;
+  height: 100%;
+  margin: 0 20px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  background-color: #fff;
+}
