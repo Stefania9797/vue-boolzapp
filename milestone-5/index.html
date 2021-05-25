@@ -87,6 +87,7 @@
                 <div class="msg" :class="message.status" v-for="(message,index) in contacts[activeContact].messages">
                     <p>{{ message.text }}</p>
                     <small>{{message.date}}</small>
+                    <i class="fa fa-trash" aria-hidden="true" @click="deleteMsg(index)"></i>
                 </div>
             </div>
             <div class="message-control d-flex">

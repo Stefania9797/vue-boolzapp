@@ -130,5 +130,8 @@ var root = new Vue(
                     }
                 });
             },
+            deleteMsg(index){
+                this.contacts[this.activeContact].messages.splice(index, 1);
+            }
         },
     })
