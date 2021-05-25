@@ -56,10 +56,10 @@
             <img :src="'./assets/img/'+contact.avatar" alt="">
                 <div class="contact-info">
                     <span>{{contact.name}}</span>
-                    <p>{{contact.messages.slice(-1).pop().text}}</p>
+                    <p v-if="contact.messages.length>0">{{contact.messages[contact.messages.length -1].text}}</p>
                 </div>
                 <div class="date">
-                    <p>{{contact.messages.slice(-1).pop().date}}</p>
+                    <p v-if="contact.messages.length>0">{{contact.messages[contact.messages.length -1].date}}</p>
                 </div>
             </div>
         </div>
@@ -84,7 +84,8 @@
                 </div>
             </div>
             <div class="message-area">
-                <div class="msg" :class="message.status" v-for="(message,index) in contacts[activeContact].messages">
+                <div class="msg" :class="message.status" 
+                v-for="(message,index) in contacts[activeContact].messages">
                     <p>{{ message.text }}</p>
                     <small>{{message.date}}</small>
                     <i class="fa fa-trash" aria-hidden="true" @click="deleteMsg(index)"></i>

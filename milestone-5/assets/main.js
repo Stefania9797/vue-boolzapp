@@ -3,7 +3,6 @@ var root = new Vue(
         el: '#root',
         data: {
             activeContact:0,
-            activeMsg:0,
             newMsg:"",
             searchTerm:"",
             contacts: [

@@ -176,10 +176,14 @@ small {
   background-image: url(./img/background.jpg);
   overflow-y: scroll;
 }
-.fa-chevron-down {
-  font-size: 12px;
+.fa-trash {
+  font-size: 15px;
   position: absolute;
   right: 0;
+  bottom: 10px;
+}
+.fa-trash:hover {
+  color: red;
 }
 /* Ctrls */
 .message-control {
